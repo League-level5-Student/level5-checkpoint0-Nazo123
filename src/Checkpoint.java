@@ -40,6 +40,12 @@ public class Checkpoint {
 		}).forEach((s)->{
 			System.out.println(s.carName);
 		});
+		readCarMPGEntryDataFromFile().stream().filter( a1 -> a1.cylinders != 8).forEach((s)->{
+			System.out.println(s.cylinders);
+		});
+		readCarMPGEntryDataFromFile().stream().filter( a1 -> a1.carName.contains("toyota")).forEach((s)->{
+			System.out.println(s.carName);
+		});
 		
 	}
 	
